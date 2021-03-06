@@ -68,8 +68,8 @@ else
     echo "Backing up files …"
     tar --exclude="$backup_dir/*" --exclude="$volumes_dir/generated_bitcoin_datadir/*" --exclude="$volumes_dir/generated_litecoin_datadir/*" --exclude="$volumes_dir/**/logs/*" -cvzf $backup_path $dbdump_path $volumes_dir
 
-    echo "Restarting BTCPay Server …"
-    btcpay_up
+    echo "Leaving BTCPay Services DOWN. The administrator must bring them back up."
+    #btcpay_up
 fi
 
 # post processing
